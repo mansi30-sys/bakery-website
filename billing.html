@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Items</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            color: white;
+            padding: 20px;
+        }
+        label{
+            color: black;
+        }
+        h2{
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: palevioletred;
+        }
+        p{
+            text-align: center;
+            position: relative;
+            top:-80px;
+            left: 10px;
+        }
+        .order-form select {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .order-form input{
+            padding: 8px;
+            width: 98%;
+            margin-bottom: 10px;
+        }
+        .order-form button {
+            background-color: rgb(225, 119, 241);
+            color: black;
+            border: none;
+            padding: 15px 10px;
+            border-radius: 5px;
+            margin: 80px;
+            cursor: pointer;
+            position: relative;
+            top: -20px;
+            left: 620px;
+            
+        }
+        .order-form button:hover {
+            background-color: rgb(211, 73, 152);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bakery Items</h1>
+    </header>
+    <main>
+        <h2>Order Your Items</h2>
+        <form class="order-form" id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="item">Select an Item:</label>
+            <select id="item" required>
+                <option value="" disabled selected></option>
+                <option value="Chocolate Cake">Chocolate Cake - Rs.450</option>
+                <option value="Vanilla Bean Cake">Vanilla Bean Cake - Rs.300</option>
+                <option value="Red Velvet Cake">Red Velvet Cake - Rs.500</option>
+                <option value="Fruit Cake">Fruit Cake - Rs.500</option>
+                <option value="Lemon Drizzle Cake">Lemon Drizzle Cake - Rs.400</option>
+                <option value="Sourdough Bread">Sourdough Bread - Rs.100</option>
+                <option value="Whole Wheat Bread">Whole Wheat Bread - Rs.60</option>
+                <option value="Focaccia">Focaccia - Rs.250</option>
+                <option value="Ciabatta">Ciabatta - Rs.150</option>
+                <option value="Baguette">Baguette - Rs.100</option>
+                <option value="Chocolate Chip Cookies">Chocolate Chip Cookies - Rs.40 each</option>
+                <option value="Oatmeal Raisin Cookies">Oatmeal Raisin Cookies - Rs.60 each</option>
+                <option value="Sugar Cookies">Sugar Cookies - Rs.20 each</option>
+                <option value="Peanut Butter Cookies">Peanut Butter Cookies - Rs.30 each</option>
+                <option value="Snickerdoodles">Snickerdoodles - Rs.50 each</option>
+            </select>
+            
+            <button type="submit">Place Order</button>
+            <p><a href="registration.html">Register here</a></p> <!-- Link to billing page -->
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const item = document.getElementById('item').value;
+            alert(`Order placed!\nName: ${name}\nEmail: ${email}\nItem: ${item}`);
+        });
+        // Handle registration form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert('Registration successful!'); // Replace with actual registration logic
+        });
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit'), function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert('Login successful!'); // Replace with actual login logic
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            top:0px;
+        }
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+        main {
+            margin-top: 80px;
+            text-align: center;
+        }
+        p{
+            font-weight: bold;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .button {
+            background-color: rgb(225, 119, 241);
+            color: black;
+            border: none;
+            padding: 15px 10px;
+            border-radius: 5px;
+            margin: 80px;
+            cursor: pointer;
+            position: relative;
+            top:250px;
+            left: 10px;
+            
+        }
+        .button:hover {
+            background-color: rgb(211, 73, 152);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Bakery!</h1>
+    </header>
+    <main>
+        <h2>Your one-stop shop for delicious cakes, breads, and cookies</h2>
+        <p>Explore our mouthwatering items and place your order today!</p>
+        <div>
+            <a href="registration.html" class="button">Register</a>
+            <a href="items.html" class="button">View Items</a>
+            <a href="billing.html" class="button">Place an Order</a>
+        </div>
+        <div class="container">
+            <img id="sideImage1" class="side-image" src="side image1.jpeg" alt="Side Image 1" onclick="moveToCenter(this)">
+            <img id="mainImage" class="main-image" src="main image.jpg" alt="Main Image">
+            <img id="sideImage2" class="side-image" src="side image2.jpeg" alt="Side Image 2" onclick="moveToCenter(this)">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Our Bakery. All rights reserved.</p>
+    </footer>
+    <script>
+    function moveToCenter(image) {
+    const mainImage = document.getElementById('mainImage');
+    const mainImageSrc = mainImage.src;
+
+    // Change the main image source to the clicked side image's source
+    mainImage.src = image.src;
+
+    // Change the clicked side image's source to the main image's source
+    image.src = mainImageSrc;
+}
+</script>
+</body>
+</html>
